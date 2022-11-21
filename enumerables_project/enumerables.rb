@@ -42,6 +42,7 @@ class Array
         end
         return true
     end
+    
 end
 
 # return_value = [1, 2, 3].my_each do |num|
