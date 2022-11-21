@@ -67,6 +67,24 @@ class Array
     end
 end
 
+def my_join(separator = "")
+        new_string = ""
+        self.each_with_index do |ele, idx|
+            if idx != self.length - 1
+                new_string += ele + separator
+            else
+                new_string += ele
+            end
+        end
+        new_string
+    end
+    def my_reverse
+        new_arr = []
+        self.each do |ele|
+            new_arr.unshift(ele)
+        end
+        new_arr
+    end
 # return_value = [1, 2, 3].my_each do |num|
 #  puts num
 # end.my_each do |num|
