@@ -55,7 +55,7 @@ class Array
         end
         return new_arr
     end
-    
+
     def my_zip(*arrs)
         new_arr = []
 
