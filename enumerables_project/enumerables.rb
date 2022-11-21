@@ -43,6 +43,19 @@ class Array
         return true
     end
 
+    def my_flatten
+        new_arr = []
+
+        self.each do |ele|
+            if ele.is_a?(Array)
+                new_arr += ele.my_flatten
+            else
+                new_arr << ele
+            end
+        end
+        return new_arr
+    end
+    
     def my_zip(*arrs)
         new_arr = []
 
@@ -75,7 +88,7 @@ class Array
         end
         new_string
     end
-    
+
     def my_reverse
         new_arr = []
         self.each do |ele|
