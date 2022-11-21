@@ -57,17 +57,14 @@ class Array
     end
 
     def my_rotate(num=1)
-        # num.times do
-        # end
         new_arr = []
         self.each_with_index do |letter, i|
             new_arr[(i-num) % self.length] = letter
         end
         return new_arr
     end
-end
 
-def my_join(separator = "")
+    def my_join(separator = "")
         new_string = ""
         self.each_with_index do |ele, idx|
             if idx != self.length - 1
@@ -78,6 +75,7 @@ def my_join(separator = "")
         end
         new_string
     end
+    
     def my_reverse
         new_arr = []
         self.each do |ele|
@@ -85,6 +83,9 @@ def my_join(separator = "")
         end
         new_arr
     end
+end
+
+
 # return_value = [1, 2, 3].my_each do |num|
 #  puts num
 # end.my_each do |num|
