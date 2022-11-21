@@ -1,3 +1,4 @@
+require "byebug"
 class Array
     def my_each(&blk)
         i = 0
@@ -41,19 +42,7 @@ class Array
         end
         return true
     end
-
-    def my_zip (*arrs)
-        new_arr = []
-        (0...self.length).each do |i|
-            sub_arr = []
-            arrs.my_each do |arr|
-                sub_arr << arr[i]
-            end
-            new_arr << sub_arr
-        end
-        return new_arr
-    end
-
+end
 
 # return_value = [1, 2, 3].my_each do |num|
 #  puts num
@@ -63,16 +52,16 @@ class Array
 
 # p return_value
 
-# a = [1, 2, 3]
-# # p a.my_select { |num| num > 1 } # => [2, 3]
-# # p a.my_select { |num| num == 4 } # => []
+a = [1, 2, 3]
+# p a.my_select { |num| num > 1 } # => [2, 3]
+# p a.my_select { |num| num == 4 } # => []
 
-# a = [1, 2, 3]
-# p a.my_reject { |num| num > 1 } # => [1]
-# p a.my_reject { |num| num == 4 } # => [1, 2, 3]
+a = [1, 2, 3]
+p a.my_reject { |num| num > 1 } # => [1]
+p a.my_reject { |num| num == 4 } # => [1, 2, 3]
 
-# a = [1, 2, 3]
-# p a.my_any? { |num| num > 1 } # => true
-# p a.my_any? { |num| num == 4 } # => false
-# p a.my_all? { |num| num > 1 } # => false
-# p a.my_all? { |num| num < 4 } # => true
+a = [1, 2, 3]
+p a.my_any? { |num| num > 1 } # => true
+p a.my_any? { |num| num == 4 } # => false
+p a.my_all? { |num| num > 1 } # => false
+p a.my_all? { |num| num < 4 } # => true
